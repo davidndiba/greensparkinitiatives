@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-/* hide the menu on mobile */
+
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;
