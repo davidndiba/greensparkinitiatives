@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1" /> -->
   <title>Green Spark Initiative</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- NAVIGATION -->
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="container">
       <a href="index.html" class="logo">
         <img src="assets/Gradient GSI Black Full@4x-100 1logo.png" alt="GSI Logo" />
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
        <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="divisions.html">Divisions</a></li>
@@ -24,11 +25,33 @@
       </ul>
       <a href="#join" class="btn join">Join Us</a>
     </div>
-  </nav>
+  </nav> -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <img src="assets/Gradient GSI Black Full@4x-100 1logo.png" alt="GSI Logo" />
+    </a>
+
+    <!-- Hamburger: show on mobile only -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      &#9776;
+    </button>
+
+    <!-- Nav links + Join button inside the same list -->
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="divisions.html">Divisions</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#join" class="btn join">Join Us</a></li>
+    </ul>
+  </div>
+</nav>
 
   <!-- HERO -->
 
-<section class="hero-section">
+<!-- <section class="hero-section">
   <div class="container hero-wrapper">
     <div class="hero-text">
      <h1 class="hero-title">
@@ -55,6 +78,27 @@
 
 
 
+  </div>
+</section> -->
+<section class="hero-container">
+  <div class="hero-content">
+    <div class="hero-text-area">
+      <h1 class="hero-heading">
+        <span class="hero-line1">People. Planet.</span><br />
+        <span class="hero-line2">Purpose.</span>
+      </h1>
+      <p class="hero-description">
+        Join us in building a sustainable future. Engage with impactful initiatives for global change.
+      </p>
+      <div class="hero-actions">
+        <button class="hero-btn primary">Get Involved</button>
+        <button class="hero-btn secondary">Learn More</button>
+      </div>
+    </div>
+    <div class="hero-image-area">
+      <img src="your-image.jpg" alt="Hero Visual" class="hero-main-image" />
+      <img src="decorative-curve.svg" alt="" class="hero-curve" />
+    </div>
   </div>
 </section>
 
@@ -170,10 +214,6 @@
   <div class=""> 
     <img src="assets/togetherimagewithstatisticsgsi.png" alt="" class="hero-imgs">
   </div>
-        <!-- handshake circle -->
-        <!-- <div class="badge circle">
-          <img src="assets/HANDSHAKEGSI.png" alt="" class="badge-icon-small">
-        </div> -->
       </div>
 
       <!-- right: text -->
