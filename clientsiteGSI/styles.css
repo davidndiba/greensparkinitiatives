@@ -1688,21 +1688,21 @@ body {
   gap: 2rem;
 }
 
-.hero-heading {
+.hero-headings {
   display: flex;
   align-items: center;
   gap: 1rem;
   width: 100%;
 }
 
-.hero-heading hr {
+.hero-headings hr {
   flex: 1;
   border: none;
   height: 2px;
   background: #FFFFFF;
 }
 
-.hero-heading h2 {
+.hero-headings h2 {
   margin: 0 1rem;
   font-weight: bolder;
   font-size: 40px;
@@ -2118,6 +2118,132 @@ body {
   background-color: #009C67;
   color: #fff;
 }
+/* styles.css */
+
+.terra-plus-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.terra-plus-section h2 {
+  font-size: 40px;
+  color: #04846b;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  max-width: 1600px;
+  font-family: 'Inter-Bold', sans-serif;
+}
+
+.terra-plus-section .subtitle {
+  font-size: 16px;
+  color: #596475;
+  line-height: 2.4;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 1200px;
+  font-family: 'Inter-Bold', sans-serif;
+}
+
+.content-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.col-left {
+  flex: 0 0 600px;
+}
+
+.col-left h3 {
+  font-size: 36px;
+  color: #4D4D4D;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  max-width: 608px;
+  font-family: 'Inter-Bold', sans-serif;
+}
+
+.col-left ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.col-left ul li {
+  margin-bottom: 0.75rem;
+  color: #717171;
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: 'Inter-Bold', sans-serif;
+}
+
+.col-left .highlight {
+  color: #24BD5A; 
+  margin: 1.5rem 0;
+  font-size: 22px;
+  font-family: 'Inter-Bold', sans-serif;
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;  
+  color: #24BD5A;
+  font-family: 'Inter-Bold', sans-serif;
+  border: 1px solid #000000;
+  background: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.col-right {
+  flex: 1 1 400px;
+  position: relative;
+}
+
+.col-right .accent-block {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: -10%;
+  width: 60%;
+  background: #00B16A;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+/* .col-right .terra-image {
+  width: 100%;
+  height: 50%;
+  border-bottom-left-radius: 100px;
+} */
+.col-right .terra-image {
+  width: 100%;
+  height: auto;            
+  max-height: 500px;        
+  object-fit: cover;      
+  border-bottom-left-radius: 100px;
+}
+
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+  }
+  .col-left, .col-right {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+  .col-right {
+    margin-top: 2rem;
+  }
+  /* Optionally hide or adjust the accent block on very small screens */
+  .col-right .accent-block {
+    display: none;
+  }
+}
+
 
 /* ---------- Partners Hero ---------- */
 .partners-hero {
@@ -2539,9 +2665,11 @@ body {
   justify-content: flex-start;
   gap: 24px;
   margin-bottom: 32px;
+ 
 }
 
 .intro-heading {
+   max-width: 1220px;
   font-size: 48px;
   font-family: 'Inter-Bold', sans-serif;
   color: #000000;
@@ -2550,6 +2678,7 @@ body {
 }
 
 .intro-heading .highlight {
+   max-width: 220px;
   color: #24BD5A;
   font-weight: bolder;
   font-family: 'Inter-Bold', sans-serif;
@@ -2580,6 +2709,67 @@ body {
 
 .intro-text p+p {
   margin-top: 16px;
+}
+/* Container limits overall width and centers content */
+.heross {
+  max-width: 1600px;       
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Flex container for heading text and underline bar */
+.hero-heading {
+  display: flex;
+  align-items: center;      
+  flex-wrap: wrap;          
+}
+
+/* Heading text styling */
+.hero-heading h2 {
+  font-size: 48px;          
+  font-weight: bold;
+  margin: 0;               
+  line-height: 1.2;
+  color: #000;
+}
+
+/* Highlighted word in green */
+.hero-heading .highlight {
+  color: #24bd5a; 
+  font-size: 48px;          
+}
+
+/* Decorative green underline bar */
+.hero-heading .underline {
+  flex-grow: 1;           
+  height: 8px;
+  background-color: #24bd5a;
+  margin-left: 1rem;       
+  max-width: 400px;        
+}
+
+/* Paragraph styling */
+.heross p {
+  margin-top: 2.5rem;     
+  font-size: 20px;
+  line-height: 1.6;        
+  color: #596475;
+  max-width: 1200px;
+}
+
+/* Responsive adjustments for narrow screens */
+@media (max-width: 768px) {
+  .hero-heading {
+    justify-content: flex-start;  /* keep heading left-aligned */
+  }
+  .hero-heading .underline {
+    /* make the bar full width and smaller height on mobile */
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+    max-width: none;
+    height: 4px;
+  }
 }
 
 /* ---------- Our Mission ---------- */
